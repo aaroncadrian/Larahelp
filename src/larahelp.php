@@ -15,10 +15,12 @@ function mix_asset_script($path, $secure = null)
 
 function mix_asset_stylesheet($path, $secure = null)
 {
-    return view('larahelp::mix_asset_script', [
-        'path' => $path,
-        'secure' => $secure,
-    ]);
+    return stylesheet(mix_asset($path, $secure));
+}
+
+function mix_asset_css($path, $secure = null)
+{
+    return mix_asset_stylesheet($path, $secure);
 }
 
 function stylesheet($path)
