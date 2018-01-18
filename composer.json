@@ -1,0 +1,30 @@
+{
+    "name": "aaroncadrian/larahelp",
+    "description": "Additional helper functions for Laravel",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "5.*"
+    },
+    "author": {
+        "name": "Aaron Adrian ",
+        "email": "aaroncadrian@gmail.com"
+    },
+    "autoload": {
+        "files": [
+            "src/larahelp.php"
+        ],
+        "psr-4": {
+            "AaronAdrian\\Larahelp\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AaronAdrian\\Larahelp\\LarahelpServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}

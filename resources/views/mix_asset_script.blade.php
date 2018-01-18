@@ -1,0 +1,1 @@
+<script src="{{ asset(mix($path), $secure) }}"></script>
