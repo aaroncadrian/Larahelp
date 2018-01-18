@@ -27,7 +27,7 @@ class LarahelpServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/../publishable/config/larahelp.php', 'larahelp'
+            __DIR__ . '/../config/larahelp.php', 'larahelp'
         );
     }
 
