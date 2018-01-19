@@ -14,7 +14,6 @@ class LarahelpServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->bootLoadings();
         $this->bootPublications();
 
     }
@@ -31,17 +30,8 @@ class LarahelpServiceProvider extends ServiceProvider
         );
     }
 
-    protected function bootLoadings()
-    {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'larahelp');
-    }
-
     protected function bootPublications()
     {
-        $this->publishes([
-            __DIR__ . '/../resources/views' => resource_path('views/vendor/larahelp'),
-        ]);
-
         $this->publishes([
             __DIR__ . '/../config/larahelp.php' => config_path('larahelp.php'),
         ], 'larahelp_config');
