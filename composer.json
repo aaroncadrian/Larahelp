@@ -4,8 +4,12 @@
     "license": "MIT",
     "type": "library",
     "require": {
-        "php": ">=7.0",
+        "php": ">=5.5",
         "illuminate/support": "5.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0",
+        "orchestra/testbench": "~3.0"
     },
     "author": {
         "name": "Aaron Adrian ",
@@ -17,6 +21,11 @@
         ],
         "psr-4": {
             "AaronAdrian\\Larahelp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AaronAdrian\\Larahelp\\Tests\\": "tests/"
         }
     },
     "extra": {
