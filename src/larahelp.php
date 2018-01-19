@@ -1,48 +1,37 @@
 <?php
 
+function css($path)
+{
+    return str_replace_first('?', $path, config('larahelp.css.template'));
+}
+
+function js($path)
+{
+    return str_replace_first('?', $path, config('larahelp.js.template'));
+}
+
 function mix_asset($path, $secure = null)
 {
     return asset(mix($path), $secure);
 }
 
-function mix_asset_script($path, $secure = null)
-{
-    return view('larahelp::mix_asset_script', [
-        'path' => $path,
-        'secure' => $secure,
-    ]);
-}
-
-function mix_asset_stylesheet($path, $secure = null)
-{
-    return stylesheet(mix_asset($path, $secure));
-}
-
 function mix_asset_css($path, $secure = null)
 {
-    return mix_asset_stylesheet($path, $secure);
+    return css(mix_asset($path, $secure));
 }
 
-function stylesheet($path)
+function mix_asset_js($path, $secure = null)
 {
-    return view('larahelp::stylesheet', [
-        'path' => $path,
-    ]);
+    return js(mix_asset($path, $secure));
 }
 
-function script($path)
+function css_asset($path, $secure = null)
 {
-    return view('larahelp::script', [
-        'path' => $path,
-    ]);
+    return css(asset($path, $secure));
 }
 
-function load_js($path)
+function js_asset($path, $secure = null)
 {
-    return script($path);
+    return js(asset($path, $secure));
 }
 
-function load_css($path)
-{
-    return stylesheet($path);
-}
