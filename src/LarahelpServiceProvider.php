@@ -3,7 +3,6 @@
 namespace AaronAdrian\Larahelp;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Routing\Router;
 
 class LarahelpServiceProvider extends ServiceProvider
 {
